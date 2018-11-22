@@ -1,3 +1,0 @@
-/Users/piotrjankiewicz/Desktop/pro_cw/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/piotrjankiewicz/Desktop/pro_cw/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/piotrjankiewicz/Desktop/pro_cw/cmake-build-debug/CMakeFiles/22_11_2018_exercise.out.dir
