@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/piotrjankiewicz/Desktop/pro_cw/22_11_2018_exercise.c
+stdio.h
+/Users/piotrjankiewicz/Desktop/pro_cw/stdio.h
+

@@ -1,0 +1,1 @@
+add_executable(22_11_2018_exercise.out 22_11_2018_exercise.c)
