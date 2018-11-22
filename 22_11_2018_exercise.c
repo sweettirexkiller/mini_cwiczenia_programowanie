@@ -17,6 +17,16 @@ int areEqual(int tab1[N], int tab2[N]) {
     return 1;
 }
 
+char exists(int tab[N], int toFind){
+    int i;
+    for (i = 1; i < N; i++) {
+        if (tab[i] == toFind) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
 int sumMinMax(int tab[N]) {
     int max = tab[0], min = tab[0], i;
     for (i = 1; i < N; i++) {
