@@ -1,10 +1,12 @@
 //
-// Created by Piotr Jankiewicz on 22/11/2018.
+// Created by Peter Yankievich on 22/11/2018.
 //
 
 #include "stdio.h"
 
-int main() {
-    printf("hello world!");
+int main(void) {
+//    if(n & 0x1) // is odd
+
+
     return 0;
 }

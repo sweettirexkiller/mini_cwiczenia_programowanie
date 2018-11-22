@@ -1,1 +1,1 @@
-# mini_cwiczenia_programowanie
+# Zajęcia z Aleksander Cisłak na MINI z C
