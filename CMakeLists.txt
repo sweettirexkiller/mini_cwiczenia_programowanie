@@ -1,1 +1,7 @@
-add_executable(22_11_2018_exercise.out 22_11_2018_exercise.c)
+cmake_minimum_required(VERSION 3.12)
+project(cwiczenia C)
+
+set(CMAKE_C_STANDARD 99)
+
+add_executable(cwiczenie01 22_11_2018_exercise.c)
+add_executable(cwiczenia02 29_11_2018_exercise.c)
