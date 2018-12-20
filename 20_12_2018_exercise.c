@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 typedef struct Vector {
     int size;
@@ -19,25 +20,68 @@ void freeVector(Vector *vector);
 
 void print(Vector *vector);
 
+char **parse(const char *str, int *size);
+
+
 int main(void) {
-    int x;
-    Vector vector;
-    init(&vector);
+//    int x;
+//    Vector vector;
+//    init(&vector);
+//
+//    while (1) {
+//        scanf("%d", &x);
+//
+//        if (x == -1) {
+//            break;
+//        }
+//        add(&vector, x);
+//    }
+//
+//    print(&vector);
+//
+//    freeVector(&vector);
 
-    while (1) {
-        scanf("%d", &x);
+    int i;
+    char *str = "ala,ma,kota,a,jarek,ma,psa";
+    char **tab;
+    int size;
+    tab = parse(str, &size);
 
-        if (x == -1) {
-            break;
-        }
-        add(&vector, x);
+    for (i = 0; i < size; ++i) {
+        printf("%s\n", tab[i]);
     }
 
-    print(&vector);
-
-    freeVector(&vector);
     return 0;
 }
+
+char **parse(const char *str, int *size) {
+    int i, count = 0;
+    int iC, iRow, start, currentSize;
+    char **ret;
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ',') { count++; }
+    }
+    count++;
+    ret = (char **) malloc(sizeof(char *) * count);
+    if (ret == NULL) return NULL;
+
+    iC = 0;
+    start = 0;
+    for (iRow = 0; iRow < count; iRow++) {
+        for (iC = start; str[iC] != ','; ++iC);
+
+        currentSize = iC - start + 1;
+        ret[iRow] = malloc(currentSize * sizeof(char));
+        if (ret[iRow] == NULL) {
+            // free for 0 to iRow
+        }
+
+        strncpy(ret[iRow], str + start, currentSize);
+        ret[iRow] = '\0';
+    }
+
+}
+
 
 void init(Vector *vector) {
     vector->size = 0;
@@ -69,6 +113,6 @@ void print(Vector *vector) {
     putchar('\n');
 }
 
-void freeVector(Vector *vector){
+void freeVector(Vector *vector) {
     free(vector->tab);
 }
