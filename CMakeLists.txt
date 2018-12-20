@@ -3,7 +3,7 @@ project(cwiczenia C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(ex 13_12_2018_chars.c)
+add_executable(ex 20_12_2018_exercise.c)
 #add_executable(cwiczenia03 06_12_2018_exercise.c)
 #add_executable(cwiczenie01 22_11_2018_exercise.c)
 #add_executable(cwiczenia02 29_11_2018_exercise.c)
