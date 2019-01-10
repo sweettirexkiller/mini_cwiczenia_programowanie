@@ -61,10 +61,14 @@ int main(void) {
 //
 //    printf("z =  %u\n", ~z);
 
-    unsigned ip;
-    setIP(&ip, 120, 100, 50, 40);
-    dumpIP(ip);
-
+//    unsigned ip;
+//    setIP(&ip, 120, 100, 50, 40);
+//    dumpIP(ip);
+    int i;
+    for (i = 0x10; i; i >>= 1) {
+        puts("loop");
+//        printf("%d\n", i);
+    }
     return 0;
 }
 
