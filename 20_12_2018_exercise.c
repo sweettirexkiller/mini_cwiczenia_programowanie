@@ -24,32 +24,32 @@ char **parse(const char *str, int *size);
 
 
 int main(void) {
-//    int x;
-//    Vector vector;
-//    init(&vector);
-//
-//    while (1) {
-//        scanf("%d", &x);
-//
-//        if (x == -1) {
-//            break;
-//        }
-//        add(&vector, x);
-//    }
-//
-//    print(&vector);
-//
-//    freeVector(&vector);
+    int x;
+    Vector vector;
+    init(&vector);
 
-    int i;
-    char *str = "ala,ma,kota,a,jarek,ma,psa";
-    char **tab;
-    int size;
-    tab = parse(str, &size);
+    while (1) {
+        scanf("%d", &x);
 
-    for (i = 0; i < size; ++i) {
-        printf("%s\n", tab[i]);
+        if (x == -1) {
+            break;
+        }
+        add(&vector, x);
     }
+
+    print(&vector);
+
+    freeVector(&vector);
+
+//    int i;
+//    char *str = "ala,ma,kota,a,jarek,ma,psa";
+//    char **tab;
+//    int size;
+//    tab = parse(str, &size);
+//
+//    for (i = 0; i < size; ++i) {
+//        printf("%s\n", tab[i]);
+//    }
 
     return 0;
 }
