@@ -82,7 +82,7 @@ void destroy(Node *head) {
 
 void removeNode(Node **head, Node **tail, Node *toDelete) {
     Node *it = toDelete;
-    if (head == NULL || tail == NULL) {
+    if (*head == NULL || *tail == NULL) {
         return;
     }
     if (it->prev == NULL) {
@@ -91,7 +91,7 @@ void removeNode(Node **head, Node **tail, Node *toDelete) {
         it->prev->next = it->next;
     }
 
-    if (it->prev == NULL) {
+    if (it->next == NULL) {
         *tail = it->prev;
     } else {
         it->next->prev = it->prev;
